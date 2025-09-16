@@ -7,6 +7,7 @@ import lombok.Setter;
 @Getter
 public class TarefaPutRequest {
 	
+	private String idTarefa;
 	private String nomeTarefa;
 	private String dataTarefa;
 	private String prioridadeTarefa;
