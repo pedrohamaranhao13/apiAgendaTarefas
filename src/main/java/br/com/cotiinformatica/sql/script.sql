@@ -31,3 +31,38 @@ from
 	categoria
 order by 
 	nome;
+
+	
+	-- Consulta para retornar a quantidade de tarefas por prioridade
+	select 
+	case 
+		when finalizado = true THEN 'Tarefas finalizadas'
+		else 'Tarefas em aberto'
+	end as status,
+	count(*) as quantidade
+from 
+	tarefa 
+group by 
+	finalizado
+
+
+
+-- Consulta para retornar a quantidade de tarefas por prioridade
+select
+	prioridade,
+	count(*) as quantidade
+from
+	tarefa
+group by 
+	prioridade;
+
+-- Consulta para retornar a quantidade de tarefas por cada categoria
+select 
+	c.nome as categoria,
+	count(*) as quantidade
+from 
+	tarefa t
+inner join categoria c 
+on c.id = t.categoria_id
+group by 
+	c.nome

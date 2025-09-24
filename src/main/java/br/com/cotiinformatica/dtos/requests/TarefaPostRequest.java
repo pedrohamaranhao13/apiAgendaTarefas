@@ -1,4 +1,4 @@
-package br.com.cotiinformatica.dtos;
+package br.com.cotiinformatica.dtos.requests;
 
 
 import lombok.Getter;

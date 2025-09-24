@@ -1,6 +1,5 @@
 package br.com.cotiinformatica.controllers;
 
-import java.nio.file.Path;
 import java.time.LocalDate;
 import java.util.UUID;
 
@@ -14,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import br.com.cotiinformatica.dtos.TarefaPostRequest;
-import br.com.cotiinformatica.dtos.TarefaPutRequest;
+import br.com.cotiinformatica.dtos.requests.TarefaPostRequest;
+import br.com.cotiinformatica.dtos.requests.TarefaPutRequest;
 import br.com.cotiinformatica.entities.Categoria;
 import br.com.cotiinformatica.entities.Tarefa;
 import br.com.cotiinformatica.enums.Prioridade;

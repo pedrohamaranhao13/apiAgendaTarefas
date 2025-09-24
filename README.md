@@ -1,25 +1,26 @@
-# Getting Started
+# 📅 Agenda de Tarefas
 
-### Reference Documentation
-For further reference, please consider the following sections:
+## 📖 Descrição do Projeto
+Aplicação desenvolvida em **[Spring Boot](https://spring.io/projects/spring-boot)** com arquitetura de **API REST**, destinada à criação e gerenciamento de uma **agenda de tarefas** e **categorias**.  
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/3.5.5/maven-plugin)
-* [Create an OCI image](https://docs.spring.io/spring-boot/3.5.5/maven-plugin/build-image.html)
-* [Spring Boot DevTools](https://docs.spring.io/spring-boot/3.5.5/reference/using/devtools.html)
-* [Spring Web](https://docs.spring.io/spring-boot/3.5.5/reference/web/servlet.html)
+Tecnologias e recursos utilizados:  
+- **[PostgreSQL](https://www.postgresql.org/)** – Banco de dados relacional  
+- Arquitetura limpa com separação em camadas  
+- **[JDBC](https://docs.oracle.com/javase/tutorial/jdbc/)** para conexão com o banco de dados  
+- **API REST** para padronização dos serviços  
+- **[Swagger](https://swagger.io/)** para documentação da API  
+- **[Lombok](https://projectlombok.org/)** para reduzir boilerplate no código  
+- Configuração de **[CORS](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/CORS)** para permissões de acesso  
 
-### Guides
-The following guides illustrate how to use some features concretely:
+---
 
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
+## 🏗️ Organização do Projeto
+O projeto está estruturado nas seguintes camadas:  
 
-### Maven Parent overrides
-
-Due to Maven's design, elements are inherited from the parent POM to the project POM.
-While most of the inheritance is fine, it also inherits unwanted elements like `<license>` and `<developers>` from the parent.
-To prevent this, the project POM contains empty overrides for these elements.
-If you manually switch to a different parent and actually want the inheritance, you need to remove those overrides.
-
+- **Entities** → Classes de modelo de dados  
+- **Repositories** → Implementação das operações SQL no banco  
+- **Factories** → Implementação do padrão *Factory* para conexão com o PostgreSQL  
+- **DTOs** → Classes para entrada (*request*) e saída (*response*) da API  
+- **Configurations** → Configuração do Swagger e do CORS  
+- **Controllers** → Serviços da API seguindo o padrão REST  
+- **Enums** → Definição de tipos multivalorados  
